@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalbonyan Board</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: sans-serif;
+            background-color: #009578;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            width: 300px;
+            margin: 80px auto 70px;
+        }
+        .container{
+            width: 70%;
+            margin: 0 auto 100px;
+            display: flex;
+            gap: 100px;
+        }
+        .container div{
+            width: 450px;
+        }
+        h2 {
+            color: white;
+            margin-bottom: 25px;
+        }
+        button {
+            width: 100%;
+            background-color: #00866D;
+            border: none;
+            height: 40px;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 7px;
+        }
+        ul{
+            list-style: none;
+            padding: 13px 2px;
+            transition: background-color .1s;
+            border-radius: 5px;
+        }
+        .drop{
+            background-color: #2cb89e;
+            min-height: 100px;
+        }
+        li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+        li:last-child{
+            margin-bottom: 0;
+        }
+        input{
+            width: 100%;
+            height: 40px;
+            border-radius: 5px;
+            border: none;
+            padding-left: 10px;
+            font-size: 18px;
+        }
+        input:focus{
+            outline: none;
+        }
+        .remove-svg{
+            width: 18px;
+            fill: rgb(215, 46, 46);
+            position: absolute;
+            left: 16.3rem;
+            top: 11px;
+            cursor: pointer;
+        }
+        .edit-svg{
+            width: 18px;
+            fill: green;
+            position: absolute;
+            left: 14.5rem;
+            top: 12px;
+            cursor: pointer;
+        }
+        @media only screen and (max-width: 600px) {
+            .container {
+                flex-direction: column;
+                width: 22rem;
+                margin-bottom: 300px;
+            }
+            .container div {
+                width: 22rem;
+            }
+            input, button{
+                height: 3.2rem;
+            }
+            .remove-svg{
+                left: 20rem;
+                top: 15px;
+                width: 20px;
+            }
+            .edit-svg{
+                left: 18rem;
+                top: 16px;
+                width: 20px;
+            }
+        }
+        @media only screen and (max-width: 400px) {
+            .container {
+                flex-direction: column;
+                width: 18rem;
+                margin-bottom: 300px;
+            }
+            .container div {
+                width: 18rem;
+            }
+            input, button{
+                height: 3.2rem;
+            }
+            .remove-svg{
+                left: 16rem;
+                top: 15px;
+                width: 20px;
+            }
+            .edit-svg{
+                left: 14rem;
+                top: 16px;
+                width: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h">Kalbonyan Board</h1>
+    <div class="container">
+        <div>
+            <h2>Not Started</h2>
+            <ul id="tasks-list1">
+
+            </ul>
+            <button id="add-btn1" type="button">&#43;Add</button>
+        </div>
+        <div>
+            <h2>IN Progress</h2>
+            <ul id="tasks-list2">
+
+            </ul>
+            <button id="add-btn2" type="button">&#43;Add</button>
+        </div>
+        <div>
+            <h2>Completed</h2>
+            <ul id="tasks-list3">
+
+            </ul>
+            <button id="add-btn3" type="button">&#43;Add</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
